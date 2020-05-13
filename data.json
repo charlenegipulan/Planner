@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Online Store",
+            "tasks": {
+                "completed": [],
+                "active": [],
+                "todo": []
+            }
+        },
+        {
+            "id": 2,
+            "name": "Youtube Videos",
+            "tasks": {
+                "completed": [],
+                "active": [],
+                "todo": []
+            }
+        }
+    ]
+}
