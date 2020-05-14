@@ -4,7 +4,8 @@ angular.module('planner')
 
     $http.get('/projectlist').then(function(data) {
         console.log('i got the data');
-        $scope.projectList = data;
-    })
+        $scope.projectList = data.data;
+        console.log(data);
+    });
 
 }]);

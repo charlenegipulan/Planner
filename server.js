@@ -14,7 +14,11 @@ app.get('/projectlist', function(req, res) {
         name: 'Youtube videos'
     }
 
-    var projectList = [project1, project2];
+    project3 = {
+        name: 'Kitchen remodel'
+    }
+
+    var projectList = [project1, project2, project3];
     res.json(projectList);
 });
 

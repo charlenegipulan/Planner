@@ -6,7 +6,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: '/views/home.html',
             controller: 'DashboardCtrl'
         }).
-        when('/project/name', {
+        when('/project/:id', {
             templateUrl: '/views/project_view.html',
             controller: 'ProjectCtrl'
         }).
