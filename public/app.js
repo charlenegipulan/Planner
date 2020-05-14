@@ -8,7 +8,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         }).
         when('/project/:id', {
             templateUrl: '/views/project_view.html',
-            controller: 'ProjectCtrl'
+            controller: 'ProjectDetailsCtrl'
         }).
         otherwise({redirectTo: '/'})
     $locationProvider.hashPrefix('');

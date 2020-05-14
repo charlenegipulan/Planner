@@ -3,7 +3,11 @@
     
     <div class="current-items-container">
         <h4>Your Projects:</h4>
-        <div ng-repeat="project in projectList">
-            {{project.name}}
+        <div> 
+            <a ng-repeat="project in projects" href="#/project/{{project.id}}">
+                <div>
+                    {{project.name}}
+                </div>
+            </a>
         </div>
 </div>
