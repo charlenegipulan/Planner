@@ -1,25 +1,19 @@
+var fs = require('fs');
+var data = fs.readFileSync('data.json');
+var projectList = JSON.parse(data);
+
 var express = require('express');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/projectlist', function(req, res) {
+app.get('/projectList', function(req, res) {
+    console.log(res)
     console.log('i recieved a get request');
 
-    project1 = {
-        name: 'Online Store'
-    }
 
-    project2 = {
-        name: 'Youtube videos'
-    }
-
-    project3 = {
-        name: 'Kitchen remodel'
-    }
-
-    var projectList = [project1, project2, project3];
     res.json(projectList);
+    
 });
 
 

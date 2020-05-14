@@ -1,22 +1,33 @@
-{
-    "projects": [
-        {
-            "id": 1,
-            "name": "Online Store",
-            "tasks": {
-                "completed": [],
-                "active": [],
-                "todo": []
+[      
+    {
+        "id": 1,
+        "name": "Online Store",
+        "tasks": 
+            {
+             "completed": [],
+             "active": [],
+             "todo": []
             }
-        },
+    },      
+    {
+        "id": 2,
+        "name": "Youtube Videos",
+        "tasks": 
         {
-            "id": 2,
-            "name": "Youtube Videos",
-            "tasks": {
-                "completed": [],
-                "active": [],
-                "todo": []
-            }
+            "completed": [],
+            "active": [],
+            "todo": []
         }
-    ]
-}
+    },      
+    {
+        "id": 3,
+        "name": "Kitchen remodel",
+        "tasks": 
+        {
+            "completed": [],
+            "active": [],
+            "todo": []
+        }
+    }
+]
+ 
