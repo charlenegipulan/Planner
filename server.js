@@ -2,20 +2,18 @@ var fs = require('fs');
 var data = fs.readFileSync('data.json');
 var projectList = JSON.parse(data);
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/projectList', function(req, res) {
-    console.log(res)
-    console.log('i recieved a get request');
+//gets all projects
+app.get('/projectList', (req, res) => res.json(projectList));
 
-
-    res.json(projectList);
-    
+//get single project
+app.get('/projectList/:id', function(req, res) {
+    res.json(projectList.filter(project => project.id === parseInt(req.params.id)));
 });
 
-
-app.listen(3000);
-console.log("Server running on port 3000");
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

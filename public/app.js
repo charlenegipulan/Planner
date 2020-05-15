@@ -1,6 +1,6 @@
 var app = angular.module('planner', ['ngRoute']);
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', '$qProvider', function($routeProvider, $locationProvider, $qProvider) {
     $routeProvider.
         when('/', {
             templateUrl: '/views/home.html',

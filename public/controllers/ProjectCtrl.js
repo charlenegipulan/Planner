@@ -7,11 +7,9 @@ angular.module('planner')
 
 }])
 
-
-.controller('ProjectDetailsCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
-    var projectId = $routeParams.projectId;
-    console.log(projectId);
-    $http.get('/projectList/'+projectId).then(function(data) {
-        $scope.projects = data.data;
+.controller('ProjectDetailsCtrl', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location) {
+    $http.get('/projectList/'+$routeParams.id).then(function(data) {
+        $scope.project = data.data[0];
+        console.log($scope.project);
     });
-}])
+}]);
